@@ -52,7 +52,8 @@ diffusion = GaussianDiffusion(
     image_size = image_size,
     timesteps = 1000,   # number of steps
     loss_type = 'l1',    # L1 or L2
-    p2_loss_weight_gamma = 1
+    p2_loss_weight_gamma = 1,
+    beta_schedule='cosine'
 ).cuda()
 
 # diffusion.model.load_state_dict(torch.load('../pretrained_models/ffhq_p2.pt'),strict=True)
